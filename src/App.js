@@ -77,8 +77,8 @@ function App() {
     <div className="App">
       <Nav />
       <Section title="Now Playing" movieList={now_playing_movies} />
-      {/* <Section title="Upcoming Movies" movieList={upcoming_movies} /> */}
-      {/* <Section title="Popular Movies" movieList={popular_movies} /> */}
+      <Section title="Upcoming Movies" movieList={upcoming_movies} />
+      <Section title="Popular Movies" movieList={popular_movies} />
     </div>
   );
 }
