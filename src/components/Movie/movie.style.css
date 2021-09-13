@@ -1,6 +1,19 @@
-.each-movie {
-  width: 100px;
-  height: 100px;
+.each-movie-container {
+  width: 125px;
+  height: 200px;
   border: 1px solid black;
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
 }
+
+.each-movie-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* .each-movie:first-child {
+  margin: 0;
+  margin-right: 10px;
+} */

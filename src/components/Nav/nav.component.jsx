@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./nav.style.css";
 const Nav = () => {
   return (
@@ -13,9 +14,12 @@ const Nav = () => {
         </a>
       </div>
       <ul className="nav-menu">
-        <li>Movie</li>
-        <li>TV</li>
-        <li>Search</li>
+        <li>Movie{/* <Link to="www.naver.com">Movie</Link> */}</li>
+        <li>TV{/* <Link to="">Tv</Link> */}</li>
+        <li>
+          Search
+          {/* <Link>Search</Link> */}
+        </li>
       </ul>
     </nav>
   );
