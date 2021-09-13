@@ -9,9 +9,9 @@ const Section = ({ title, movieList }) => {
   return (
     <div className="section-container">
       <h2 className="title">{title}</h2>
-      <div className="section">
+      <div className="movie-container">
         {movieList.length > 0 &&
-          movieList.map((movie) => <Movie key={movie.id} data={movie} />)}
+          movieList.map((movie) => <Movie data={movie} />)}
       </div>
     </div>
   );
