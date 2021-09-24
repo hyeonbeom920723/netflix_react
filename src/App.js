@@ -12,9 +12,9 @@ function App() {
   const [now_playing_movies, set_now_playing_movies] = useState([]);
   const [upcoming_movies, set_upcoming_movies] = useState([]);
   const [popular_movies, set_popular_movies] = useState([]);
-  // const [top_rated_tv, set_top_rated_tv] = useState([]);
-  // const [popular_tv, set_popular_tv] = useState([]);
-  // const [air_tv, set_air_tv] = useState([]);
+  const [top_rated_tv, set_top_rated_tv] = useState([]);
+  const [popular_tv, set_popular_tv] = useState([]);
+  const [air_tv, set_air_tv] = useState([]);
   // useEffect(() => {
   //   Promise.all([
   //     fetch(
@@ -63,6 +63,21 @@ function App() {
       .then((data) => {
         // console.log(data.results);
         set_popular_movies(data.results);
+      });
+    fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=${API_KEY}&language=en-US&page=1`)
+      .then((response) => response.json())
+      .then((data) => {
+        set_top_rated_tv(data.results);
+      });
+    fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}&language=en-US&page=1`)
+      .then((response) => response.json())
+      .then((data) => {
+        set_popular_tv(data.results);
+      });
+    fetch(`https://api.themoviedb.org/3/tv/airing_today?api_key=${API_KEY}&language=en-US&page=1`)
+      .then((response) => response.json())
+      .then((data) => {
+        set_air_tv(data.results);
       });
   }, [API_KEY]);
 
